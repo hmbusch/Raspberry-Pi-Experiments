@@ -4,11 +4,34 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.icanmakeit.raspberry</groupId>
-    <artifactId>raspberry-test-rs</artifactId>
+    <artifactId>raspberry-javaee6-test</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>raspberry-test-rs</name>
+    <name>Java 6 EE test project for Raspberry Pi</name>
+
+    <developers>
+        <developer>
+            <id>h.m.busch@googlemail.com</id>
+            <name>Hendrik Busch</name>
+            <email>h.m.busch@googlemail.com</email>
+            <timezone>+1</timezone>
+            <url>http://www.icanmakeit.de</url>
+        </developer>
+    </developers>
+    
+    <scm>
+        <connection>scm:git:https://github.com/hmbusch/Raspberry-Pi-Experiments.git/raspberry-java6ee-test</connection>
+        <developerConnection>git@github.com:hmbusch/Raspberry-Pi-Experiments.git/raspberry-java6ee-test</developerConnection>
+        <url>https://github.com/hmbusch/Raspberry-Pi-Experiments/tree/dev/raspberry-java6ee-test</url>
+    </scm>
+
+    <licenses>
+        <license>
+            <name>Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Germany License</name>
+            <url>http://creativecommons.org/licenses/by-nc-sa/3.0/de/</url>
+        </license>
+    </licenses>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -16,6 +39,8 @@
     </properties>
 
     <dependencies>
+        <!-- Use Glassfish embedded for all Java 6 EE dependencies, the official -->
+        <!-- Oracle/Sun package has been stripped of certain needed classes.     -->
         <dependency>
             <groupId>org.glassfish.extras</groupId>
             <artifactId>glassfish-embedded-all</artifactId>
